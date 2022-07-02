@@ -6,8 +6,6 @@ function setTimerLabel(){
     releaseDate.setMinutes(0);
     releaseDate.setSeconds(0);
 
-    console.log("THIS IS RUNNING")
-
     // get total seconds between the times
     var delta = Math.abs(currentDate - releaseDate) / 1000;
 
@@ -30,12 +28,12 @@ function setTimerLabel(){
     // what's left is seconds
     var seconds = delta % 60;  // in theory the modulus is not required
 
-    document.getElementById("skyrimCounter").innerHTML = "it has been <b>" 
+    document.getElementById("skyrimCounter").innerHTML = "<b>" 
                                                         + years + " years, "
                                                         + days + " days, " 
                                                         + hours + " hours, " 
                                                         + minutes + " minutes, and " 
-                                                        +seconds+ " seconds</b> since Skyrim was released without a macOS port";
+                                                        +seconds+ " seconds</b>";
 }
 
 function setTimer() {
