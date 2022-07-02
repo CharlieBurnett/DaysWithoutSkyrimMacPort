@@ -26,14 +26,14 @@ function setTimerLabel(){
     delta -= minutes * 60;
 
     // what's left is seconds
-    var seconds = delta % 60;  // in theory the modulus is not required
+    var seconds = Math.floor(delta % 60);  // in theory the modulus is not required
 
-    document.getElementById("skyrimCounter").innerHTML = "<b>" 
-                                                        + years + " years, "
-                                                        + days + " days, " 
-                                                        + hours + " hours, " 
-                                                        + minutes + " minutes, and " 
-                                                        +seconds+ " seconds</b>";
+    document.getElementById("skyrimCounter").innerHTML = "<b><u>" 
+                                                        + years + "</u> years, <u>"
+                                                        + days + "</u> days, <u>" 
+                                                        + hours + "</u> hours, <u>" 
+                                                        + minutes + "</u> minutes, and <u>" 
+                                                        +seconds+ "</u> seconds</b>";
 }
 
 function setTimer() {
